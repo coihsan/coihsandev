@@ -27,6 +27,6 @@ export const techstack = [
 
 export const footer = [
     {title: "404", href: "/404"},
-    {title: "Source", href: "/source"},
+    {title: "Source", href: "https://github.com/coihsan/coihsan"},
     {title: "Style", href: "/style"},
 ]

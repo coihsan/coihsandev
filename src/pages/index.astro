@@ -1,14 +1,14 @@
 ---
-import Contact from '../components/Contact.astro';
-import Hero from '../components/Hero.astro';
-import ProjectList from '../components/ProjectList.astro';
+import Contact from '../components/section/Contact.astro';
+import Hero from '../components/section/Hero.astro';
+import ProjectList from '../components/section/ProjectList.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Muhammad Ihsan">
-	<div class="max-w-screen-lg px-4 py-8 mx-auto">
+	<div class="max-w-screen-md px-4 py-8 mx-auto">
 		<Hero />
-		<Contact />
 		<ProjectList />
+		<Contact />
 	</div>
 </Layout>

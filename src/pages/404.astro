@@ -1,12 +1,16 @@
 ---
+import '../styles/styles.css';
+import { ViewTransitions } from 'astro:transitions';
 import Image from 'astro/components/Image.astro';
 import ruben from '../assets/ruben-from-giphy.gif'
+import Link from '../components/ui/Link.astro';
 ---
 
-<div class="max-w-screen-lg flex justify-center items-center mx-auto">
-    <div class="flex flex-col">
-        <Image src={ruben.src} inferSize alt={'404'} />
-        <span class="text-4xl sm:text-3xl">Sorry Not Found</span>
-        <a class="px-5 py-2 rounded-lg bg-zinc-50 text-black mt-6 w-max" href="/">Go Back!</a>
+<div class="w-screen h-screen flex justify-center items-center mx-auto">
+    <div class="flex flex-col items-center">
+        <!-- <Image src={ruben.src} inferSize alt={'404'} loading="eager" /> -->
+        <h3 class="text-lg">Oooopps!</h3>
+        <span class="text-4xl mb-3 sm:text-3xl">Sorry Not Found!</span>
+        <Link variant="default" size='lg' href='/'>Go Back!</Link>
     </div>
 </div>

@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://coihsan.vercel.app/" ,
+    site: "/" ,
     integrations: [
         tailwind(), 
         icon({
