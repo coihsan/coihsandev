@@ -1,0 +1,12 @@
+---
+import Image from 'astro/components/Image.astro';
+import ruben from '../assets/ruben-from-giphy.gif'
+---
+
+<div class="max-w-screen-lg flex justify-center items-center mx-auto">
+    <div class="flex flex-col">
+        <Image src={ruben.src} inferSize alt={'404'} />
+        <span class="text-4xl sm:text-3xl">Sorry Not Found</span>
+        <a class="px-5 py-2 rounded-lg bg-zinc-50 text-black mt-6 w-max" href="/">Go Back!</a>
+    </div>
+</div>

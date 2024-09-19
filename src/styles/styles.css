@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: '';
+  } */
+  select::-ms-expand {
+	display: none;
+  }
+@layer base {
+	select::-ms-expand {
+		@apply hidden
+	}
+	@font-face {
+		font-family: 'clash';
+		font-style: normal;
+		font-weight: inherit;
+		font-display: swap;
+		src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: 'archivo';
+		font-style: normal;
+		font-weight: inherit;
+		font-display: swap;
+		src: url('/fonts/Archivo-Variable.woff2') format('woff2');
+	}
+	body {
+		@apply bg-[#0c0c0c] text-zinc-100 box-border font-[archivo];
+	  }
+}
+
+@layer components {
+	.container{
+		@apply py-8 md:py-16
+	}
+	.transitionSetting {
+		@apply transition-all duration-300
+	}
+	.h1{
+		@apply text-3xl font-bold
+	}
+	.h2{
+		@apply text-2xl font-bold
+	}
+	.paragraph{
+		@apply leading-7 whitespace-normal py-6
+	}
+}

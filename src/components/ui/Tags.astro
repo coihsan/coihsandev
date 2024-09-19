@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cva } from "class-variance-authority";
+
+const colorVariants = cva(
+    "inline-flex items-center justify-center rounded-full border px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap", 
+    {
+    variants: {
+        variant: {
+            zinc: "border-zinc-500 bg-zinc-900 text-zinc-400",
+            cyan: "border-cyan-500 bg-cyan-950 text-cyan-400",
+            fuchsia: "border-fuchsia-500 bg-fuchsia-950 text-fuchsia-300",
+            sky: "border-sky-500 bg-sky-950 text-sky-400",
+            teal: "border-teal-500 bg-teal-950 text-teal-400",
+            indigo: "border-indigo-500 bg-indigo-950 text-indigo-400",
+            emerald: "border-emerald-500 bg-emerald-950 text-emerald-400",
+        },
+    },
+});
+
+interface Props extends HTMLAttributes<"div"> {
+    variant?: "cyan" | "fuchsia" | "sky" | "teal" | "zinc" | "indigo" | "emerald";
+}
+
+const {variant, ...props } = Astro.props as Props;
+---
+
+<div class={colorVariants({ variant })} {...props}>
+    <slot />
+</div>

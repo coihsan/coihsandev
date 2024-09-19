@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
+const today = new Date()
+const thisTime = today.getHours()
+import SelectMenu from "../components/react/select-menu"
+---
+<nav class="px-4 py-4 md:py-6 border-b-[1px] border-zinc-700">
+	<div class="flex items-center justify-between max-w-screen-md w-full mx-auto">
+		<div class="flex items-center gap-2">
+			<Image class="aspect-square rounded-full border border-zinc-50" src={'/src/assets/gue.png'} width={35} height={35} alt={'logo'} />
+			<span class="font-[clash] font-semibold text-xl select-none">coihsan</span>
+		</div>
+		<SelectMenu />
+		<div class="hidden md:flex items-center gap-2">
+			<span class="text-zinc-400 text-sm">{today.toDateString()}</span>
+			<span class="text-zinc-400 text-sm">Jakarta, {thisTime.toLocaleString('id-ID')}</span>
+		</div>
+	</div>
+</nav>

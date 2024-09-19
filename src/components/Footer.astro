@@ -1,0 +1,19 @@
+---
+import { footer } from "../lib/constant";
+const thisYear = new Date().getFullYear()
+---
+
+<footer class="border-t-[1px] border-zinc-700">
+    <div class="max-w-screen-lg px-4 mx-auto py-4 flex items-center justify-between w-full gap-4">
+        <div class="flex items-center gap-4 w-full">
+            <span class="text-xs">© {thisYear} - Development by coihsan</span>
+            <span>---</span>
+            <small class="text-xs">Built with <a class="text-green-400" href="https://astro.build">{Astro.generator}</a></small>
+        </div>
+        <div class="flex items-center gap-4">
+            {footer.map((menu) =>(
+                <a href={menu.href} class="text-zinc-400 text-sm">{menu.title}</a>
+            ))}
+        </div>
+    </div>
+</footer>
