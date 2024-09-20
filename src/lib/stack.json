@@ -1,0 +1,79 @@
+{
+    "stack":[
+        {
+            "icon": "html",
+            "name": "HTML 5",
+            "url": "/"
+        },
+        {
+            "icon": "css",
+            "name": "CSS 3",
+            "url": "/"
+        },
+        {
+            "icon": "javascript",
+            "name": "Javascript",
+            "url": "/"
+        },
+        {
+            "icon": "reactjs",
+            "name": "React.js",
+            "url": "/"
+        },
+        {
+            "icon": "typescript",
+            "name": "Typescript",
+            "url": "/"
+        },
+        {
+            "icon": "tailwind",
+            "name": "Tailwind",
+            "url": "/"
+        },
+        {
+            "icon": "next",
+            "name": "Next.js",
+            "url": "/"
+        },
+        {
+            "icon": "astro",
+            "name": "Astro.js",
+            "url": "/"
+        },
+        {
+            "icon": "prisma",
+            "name": "Prisma",
+            "url": "/"
+        },
+        {
+            "icon": "jest",
+            "name": "Jest",
+            "url": "/"
+        },
+        {
+            "icon": "redux",
+            "name": "Redux",
+            "url": "/"
+        },
+        {
+            "icon": "figma",
+            "name": "Figma",
+            "url": "/"
+        },
+        {
+            "icon": "photoshop",
+            "name": "Photoshop",
+            "url": "/"
+        },
+        {
+            "icon": "googleanalytics",
+            "name": "Analytics",
+            "url": "/"
+        },
+        {
+            "icon": "github",
+            "name": "GitHub",
+            "url": "/"
+        }
+    ]
+}

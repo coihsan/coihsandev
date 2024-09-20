@@ -19,7 +19,7 @@
             "techStack":["nextjs", "prisma", "nextAuth", "redux"]
         },
         {
-            "title": "Mangolabs",
+            "title": "yourgrandpa",
             "description": "A Task Manager for free and public source code",
             "urlDemo": "https://github.com/",
             "urlSource": "https://github.com/",
@@ -56,3 +56,4 @@
         }
     ]
 }
+

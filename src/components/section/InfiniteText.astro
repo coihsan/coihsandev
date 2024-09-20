@@ -1,0 +1,13 @@
+---
+import Section from "./Section.astro"
+
+const skills = ["Frontend Developer", "Backend Developer", "SEO Specialist", "UI/UX Designer", "Fullstack Developer"]
+---
+
+<div class="overflow-hidden relative w-full max-w-screen-lg mx-auto py-4 px-4 md:px-9 bg-white text-black font-semibold">
+    <ul class="flex items-center justify-between flex-nowrap gap-5 w-full overflow-hidden">
+        {skills.map((skill, index) => (
+            <li class="flex-1 whitespace-nowrap">{skill}</li>
+        ))}
+    </ul>
+</div>

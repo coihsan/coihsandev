@@ -27,8 +27,7 @@ export const techstack = [
 
 export const footer = [
     {title: "404", href: "/404"},
-    {title: "Source", href: "https://github.com/coihsan/coihsan"},
-    {title: "Style", href: "/style"},
+    {title: "Source", href: "/source"},
 ]
 
 export const SITE_TITLE = "˗ˏˋIhsanˎˊ";
