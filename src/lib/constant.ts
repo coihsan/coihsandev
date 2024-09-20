@@ -30,3 +30,6 @@ export const footer = [
     {title: "Source", href: "https://github.com/coihsan/coihsan"},
     {title: "Style", href: "/style"},
 ]
+
+export const SITE_TITLE = "˗ˏˋIhsanˎˊ";
+export const SITE_DESCRIPTION = 'Frontend Web Developer and Digital Marketing Enthusiast | This is my personal web';

@@ -1,16 +1,26 @@
 ---
-import '../styles/styles.css';
-import { ViewTransitions } from 'astro:transitions';
-import Image from 'astro/components/Image.astro';
-import ruben from '../assets/ruben-from-giphy.gif'
-import Link from '../components/ui/Link.astro';
+import "../styles/styles.css";
+import Image from "astro/components/Image.astro";
+import ruben from "@assets/ruben.gif";
+import Link from "../components/ui/Link.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/section/Section.astro";
 ---
 
-<div class="w-screen h-screen flex justify-center items-center mx-auto">
-    <div class="flex flex-col items-center">
-        <!-- <Image src={ruben.src} inferSize alt={'404'} loading="eager" /> -->
-        <h3 class="text-lg">Oooopps!</h3>
-        <span class="text-4xl mb-3 sm:text-3xl">Sorry Not Found!</span>
-        <Link variant="default" size='lg' href='/'>Go Back!</Link>
-    </div>
-</div>
+<Layout title="Error">
+    <Section>
+        <div class="flex flex-col items-center">
+            <Image
+                loading={"eager"}
+                class="rounded-xl mt-8"
+                src={"/src/assets/minion.gif"}
+                width={400}
+                height={198}
+                alt={"minion gif"}
+            />
+            <h3 class="text-lg">Oooopps!</h3>
+            <span class="text-4xl mb-3 sm:text-3xl">Sorry Not Found!</span>
+            <Link variant="default" size="lg" href="/">Go Back!</Link>
+        </div>
+    </Section>
+</Layout>

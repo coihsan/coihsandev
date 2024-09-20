@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}'],
@@ -8,5 +10,10 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		function ({ addComponents, theme }) {
+			addComponents({
+			});
+		  },
+	],
 };

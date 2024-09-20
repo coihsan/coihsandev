@@ -1,0 +1,58 @@
+{
+    "datague" : [
+        {
+            "title": "TaskyApp",
+            "description": "A free, open source kanban app for the web.",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "sky",
+            "tagName": "Saas",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
+            "title": "coihsan",
+            "description": "The source of this website.",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "indigo",
+            "tagName": "Portfolio",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
+            "title": "Mangolabs",
+            "description": "A Task Manager for free and public source code",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "fuchsia",
+            "tagName": "Blog",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
+            "title": "Mangolabs",
+            "description": "A Task Manager for free and public source code",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "sky",
+            "tagName": "Saas",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
+            "title": "Mangolabs",
+            "description": "A Task Manager for free and public source code",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "sky",
+            "tagName": "Saas",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
+            "title": "Mangolabs",
+            "description": "A Task Manager for free and public source code",
+            "urlDemo": "https://github.com/",
+            "urlSource": "https://github.com/",
+            "tagColor": "sky",
+            "tagName": "Saas",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        }
+    ]
+}

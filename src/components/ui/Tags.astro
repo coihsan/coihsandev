@@ -3,28 +3,41 @@ import type { HTMLAttributes } from "astro/types";
 import { cva } from "class-variance-authority";
 
 const colorVariants = cva(
-    "inline-flex items-center justify-center rounded-full border px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap", 
+    "inline-flex items-center justify-center rounded-full border px-2.5 py-0.5 font-semibold whitespace-nowrap",
     {
-    variants: {
-        variant: {
-            zinc: "border-zinc-500 bg-zinc-900 text-zinc-400",
-            cyan: "border-cyan-500 bg-cyan-950 text-cyan-400",
-            fuchsia: "border-fuchsia-500 bg-fuchsia-950 text-fuchsia-300",
-            sky: "border-sky-500 bg-sky-950 text-sky-400",
-            teal: "border-teal-500 bg-teal-950 text-teal-400",
-            indigo: "border-indigo-500 bg-indigo-950 text-indigo-400",
-            emerald: "border-emerald-500 bg-emerald-950 text-emerald-400",
+        variants: {
+            variant: {
+                zinc: "border-zinc-500 bg-zinc-900 text-zinc-400",
+                purple: "border-purple-500 bg-purple-950 text-purple-400",
+                fuchsia: "border-fuchsia-500 bg-fuchsia-950 text-fuchsia-300",
+                sky: "border-sky-500 bg-sky-950 text-sky-400",
+                teal: "border-teal-500 bg-teal-950 text-teal-400",
+                indigo: "border-indigo-500 bg-indigo-950 text-indigo-400",
+                emerald: "border-emerald-500 bg-emerald-950 text-emerald-400",
+                other: "border-zinc-800 bg-zinc-950 text-zinc-400",
+            },
+            size: {
+                sm: "text-sm",
+                xs: "text-xs",
+                lg: "h-8 px-4 py-2 text-sm",
+                default: "text-base",
+            },
+            defaultVariants: {
+                variant: "zinc",
+                size: "default",
+            }
         },
     },
-});
+);
 
 interface Props extends HTMLAttributes<"div"> {
-    variant?: "cyan" | "fuchsia" | "sky" | "teal" | "zinc" | "indigo" | "emerald";
+    variant: "purple" | "fuchsia" | "sky" | "teal" | "zinc" | "indigo" | "emerald" | "other";
+    size: "sm" | "xs" | "lg" | "default";
 }
 
-const {variant, ...props } = Astro.props as Props;
+const { variant, size, ...props } = Astro.props as Props;
 ---
 
-<div class={colorVariants({ variant })} {...props}>
+<div class={(colorVariants({variant, size}))} {...props}>
     <slot />
 </div>

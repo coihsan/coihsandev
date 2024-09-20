@@ -1,20 +1,19 @@
 ---
 import CardWrapper from "../ui/CardWrapper.astro";
 import Tags from "../ui/Tags.astro";
+import Section from "./Section.astro";
+import data from '../../lib/data.json';
 ---
 
-<div>
-    Repository
-    <div class="grid md:grid-cols-2 gap-4">
-        <CardWrapper title="TaskyApp" description="A free, open source notes app for the web." urlDemo="/" urlSource="/">
-            <div class="absolute right-4 top-4">
-                <Tags variant="zinc">Saas</Tags>
-            </div>
-        </CardWrapper>
-        <CardWrapper title="TaskyApp" description="A free, open source notes app for the web." urlDemo="/" urlSource="/">
-            <div class="absolute right-4 top-4">
-                <Tags variant="zinc">Saas</Tags>
-            </div>
-        </CardWrapper>
+<Section>
+    <h1 class="h1">Repository</h1>
+    <div class="grid md:grid-cols-3 gap-4">
+        {data.datague.map((item) =>(
+            <CardWrapper title={item.title} description={item.description} urlDemo={item.urlDemo} urlSource={item.urlSource}>
+                <div class="absolute right-4 top-4">
+                    <Tags size="xs" variant={item?.tagColor}>{item.tagName}</Tags>
+                </div>
+            </CardWrapper>
+        ))}
     </div>
-</div>
+</Section>

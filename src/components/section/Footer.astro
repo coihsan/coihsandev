@@ -1,11 +1,12 @@
 ---
 import { Icon } from "astro-icon/components";
 import { footer } from "../../lib/constant";
+import Section from "./Section.astro";
 const thisYear = new Date().getFullYear()
 ---
 
-<footer class="border-t-[1px] border-zinc-700">
-    <div class="max-w-screen-md px-4 mx-auto py-4 md:flex items-center md:justify-between w-full">
+<Section border="border-t-[1px]">
+    <div class="md:flex items-center md:justify-between w-full">
         <div class="flex items-center gap-4 w-full">
             <span class="text-xs">© {thisYear} - Development by coihsan</span>
             <Icon name={'slash'} />
@@ -17,4 +18,4 @@ const thisYear = new Date().getFullYear()
             ))}
         </div>
     </div>
-</footer>
+</Section>

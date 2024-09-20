@@ -1,11 +1,15 @@
 ---
 import { Image } from "astro:assets";
-
-
+import Section from "./Section.astro";
 ---
 
-<div class="container">
-    <h1 class="text-3xl font-bold text-center">˗ˏˋIhsanˎˊ</h1>
-    <h2 class="font-[clash] text-4xl md:text-5xl font-semibold text-center">Frontend Dev <br>& Digital Marketing</h2>
-    <Image loading={'eager'} class="mx-auto rounded-xl mt-8" src={'/src/assets/minion.gif'} width={400} height={198} alt={'minion gif'} />
-</div>
+<Section border="border-b-[1px]">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8">
+        <div class="flex flex-col">
+            <!-- <h1 class="text-3xl font-bold ">˗ˏˋIhsanˎˊ</h1> -->
+            <h2 class="font-[clash] text-4xl md:text-5xl font-semibold ">Frontend Dev <br>& Digital Marketing</h2>
+            <p class="text-zinc-400 pt-3">I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.</p>
+        </div>
+        <Image loading={'eager'} class="rounded-xl mt-8" src={'/src/assets/minion.gif'} width={400} height={198} alt={'minion gif'} />
+    </div>
+</Section>

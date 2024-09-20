@@ -2,13 +2,17 @@
 import Contact from '../components/section/Contact.astro';
 import Hero from '../components/section/Hero.astro';
 import ProjectList from '../components/section/ProjectList.astro';
+import TechStack from '../components/section/TechStack.astro';
+import Overlay from '../components/ui/Overlay.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Muhammad Ihsan">
-	<div class="max-w-screen-md px-4 py-8 mx-auto">
+	<!-- <Overlay /> -->
+	<div class="px-4">
 		<Hero />
 		<ProjectList />
+		<TechStack />
 		<Contact />
 	</div>
 </Layout>

@@ -1,6 +1,23 @@
 ---
-
+import Section from './Section.astro'
+import NextJS from '../ui/NextJS.astro'
+import ReactJS from '../ui/ReactJS.astro'
+import AstroBanner from '../ui/AstroBanner.astro'
+import Tags from '../ui/Tags.astro'
+const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile", "Web Apps"]
 ---
-<div>
-    <h1>The React Framework for the Web</h1>
-</div>
+<Section border='border-y-[1px]'>
+    <div class="mb-6">
+        <h1 class="h1">The React Framework for the Web</h1>
+    <ul class="flex items-center flex-wrap gap-3">
+        {skilldev.map((items) =>(
+            <Tags size='lg' variant="other">{items}</Tags>
+        ))}
+    </ul>
+    </div>
+    <div class="bg-green-500 grid gap-3 md:grid-flow-col md:grid-rows-2 lg:grid-flow-col h-auto">
+        <ReactJS gridClass='row-auto md:row-span-1 md:col-span-2 lg:row-span-2' />
+        <NextJS />
+        <AstroBanner />
+    </div>
+</Section>

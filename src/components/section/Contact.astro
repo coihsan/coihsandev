@@ -2,11 +2,13 @@
 import { Icon } from "astro-icon/components"
 import ButtonCopy from "../react/ButtonCopy"
 import Link from "../ui/Link.astro"
+import Section from "./Section.astro"
 
 ---
 
-<div class="py-16">
-    <div class="flex items-center gap-2">
+<Section>
+    <h3 class="h1">Have idea for web?</h3>
+    <div class="grid md:grid-cols-3 gap-2">
         <ButtonCopy client:only />
         <Link href="/" variant="default" size="lg">
             <Icon name={'whatsapp'} size={22} />
@@ -17,4 +19,4 @@ import Link from "../ui/Link.astro"
             GitHub
         </Link>
     </div>
-</div>
+</Section>

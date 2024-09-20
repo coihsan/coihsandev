@@ -12,6 +12,7 @@ const ButtonCopy = () => {
                     setIsCopy(false)
                 }, 1000)
             })
+            console.log("success")
         } catch (error) {
             console.error("Error copying email:", error);
         }

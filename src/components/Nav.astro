@@ -4,15 +4,17 @@ import { Icon } from 'astro-icon/components';
 const event = new Date();
 import SelectMenu from "../components/react/select-menu"
 ---
-<nav class="px-4 py-4 md:py-6 border-b-[1px] border-zinc-700">
-	<div class="flex items-center justify-between max-w-screen-md w-full mx-auto">
-		<div class="flex items-center gap-2">
-			<Image class="aspect-square rounded-full border border-zinc-50" src={'/src/assets/gue.png'} width={35} height={35} alt={'logo'} />
-			<span class="font-[clash] font-semibold text-xl select-none">coihsan</span>
+<nav class="px-9 py-4 md:py-6 border-b-[1px] border-zinc-700 z-[100]">
+	<a href="/">
+		<div class="flex items-center justify-between max-w-screen-lg w-full mx-auto">
+			<div class="flex items-center gap-2">
+				<Image class="aspect-square rounded-full border border-zinc-50" src={'/src/assets/gue.png'} width={35} height={35} alt={'logo'} />
+				<span class="font-[clash] font-semibold text-xl select-none">coihsan</span>
+			</div>
+			<SelectMenu client:only />
+			<div class="hidden md:flex items-center gap-2">
+				<span class="text-zinc-400 text-sm">Jakarta, {event.toLocaleString('id-ID',{timeZone: 'Asia/Jakarta'}).toString()}</span>
+			</div>
 		</div>
-		<SelectMenu client:only />
-		<div class="hidden md:flex items-center gap-2">
-			<span class="text-zinc-400 text-sm">Jakarta, {event.toLocaleString('id-ID',{timeZone: 'Asia/Jakarta'}).toString()}</span>
-		</div>
-	</div>
+	</a>
 </nav>
