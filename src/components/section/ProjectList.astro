@@ -5,10 +5,10 @@ import Section from "./Section.astro";
 import data from '../../lib/data.json';
 ---
 
-<Section>
+<Section paddingYDefault>
     <h1 class="h1">Repository</h1>
     <div class="grid md:grid-cols-3 gap-4">
-        {data.datague.map((item) =>(
+        {data.datague.slice(0, 6).map((item) =>(
             <CardWrapper title={item.title} description={item.description} urlDemo={item.urlDemo} urlSource={item.urlSource}>
                 <div class="absolute right-4 top-4">
                     <Tags size="xs" variant={item?.tagColor}>{item.tagName}</Tags>

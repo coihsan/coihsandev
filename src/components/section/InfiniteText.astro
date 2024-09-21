@@ -5,13 +5,13 @@ import Section from "./Section.astro"
 const skills = ["Frontend Developer", "Backend Developer", "SEO Specialist", "UI/UX Designer", "Fullstack Developer"]
 ---
 
-<div class="overflow-hidden relative w-full max-w-screen-lg mx-auto bg-white text-black">
-    <ul class="flex items-center justify-between flex-nowrap gap-5 w-full overflow-hidden">
+<Section borderB>
+    <ul class="flex items-center justify-between h-12 flex-nowrap gap-5 w-full overflow-hidden">
         {skills.map((skill, index) => (
-            <li class="flex-1 font-[clash] flex items-center uppercase whitespace-nowrap text-3xl font-bold">
+            <li class="flex-1 font-[clash] flex items-center leading-none uppercase gap-3 whitespace-nowrap text-3xl font-bold">
                 <Icon name={'linehorizontal'} />
                 <span>{skill}</span>
             </li>
         ))}
     </ul>
-</div>
+</Section>

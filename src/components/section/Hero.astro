@@ -4,25 +4,14 @@ import Section from "./Section.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<Section border="border-b-[1px]">
+<Section paddingYDefault borderB>
     <div class="flex flex-col">
         <div class="flex flex-col w-full max-w-xl w-full">
-            <!-- <h1 class="text-3xl font-bold ">˗ˏˋIhsanˎˊ</h1> -->
-            <h2 class="font-[clash] text-4xl md:text-6xl font-semibold ">Frontend Dev <br>& Digital Marketing</h2>
+            <h1 class="text-3xl font-semibold pb-4 font-[clash]">˗ˏˋIhsanˎˊ</h1>
+            <h2 class="font-[clash] text-4xl md:text-6xl font-semibold ">Frontend Dev & Digital Marketing</h2>
         </div>
         <div class="w-full flex flex-col md:flex-row justify-between items-center mt-8">
             <p class="text-zinc-400 pt-3 max-w-sm">A frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.</p>
-            <!-- <div class="flex gap-4 items-center">
-                <span>Mood : </span>
-                <button class="flex items-center gap-2 px-4 rounded-2xl py-2 bg-zinc-900">
-                    <Icon name="checkmark" />
-                    <span>Boring Mode!</span>
-                </button>
-                <button class="flex items-center gap-2 px-4 rounded-2xl py-2 bg-zinc-900">
-                    <Icon name="checkmark" />
-                    <span>Eighties Mode!</span>
-                </button>
-            </div> -->
             <Image loading={'eager'} class="rounded-xl mt-8" src={'/src/assets/minion.gif'} width={400} height={198} alt={'minion gif'} />
         </div>
     </div>

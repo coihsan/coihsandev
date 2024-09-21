@@ -14,6 +14,6 @@ export default defineConfig({
             iconDir: "src/assets/icons"
         }),
     ],
-    output: 'server',
+    output: 'hybrid',
     // adapter: nodejs({ mode: 'standalone' }),
 });

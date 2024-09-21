@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon/components";
+import Link from "./Link.astro";
+
+interface Props {
+    label: string
+}
+const { label } = Astro.props as Props
+---
+
+<div class="flex items-center gap-3 pb-6">
+    <Link variant='outline' size='icon' href='/'>
+        <Icon name={'reactjs'} size={24} />
+    </Link>
+    <span>{label}</span>
+</div>

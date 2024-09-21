@@ -1,0 +1,23 @@
+---
+import Section from '../components/section/Section.astro';
+import CardWrapper from '../components/ui/CardWrapper.astro';
+import Tags from '../components/ui/Tags.astro';
+import Layout from '../layouts/Layout.astro';
+import data from '../lib/data.json'
+import BackButton from '../components/ui/BackButton.astro';
+---
+
+<Layout title="Muhammad Ihsan">
+	<Section paddingYCustom='py-4 lg:py-12 xl:py-12'>
+        <BackButton label='Projects' />
+        <div class="grid md:grid-cols-2 gap-4">
+            {data.datague.map((stack) =>(
+                <CardWrapper title={stack.title} description={stack.description} urlDemo={stack.urlDemo} urlSource={stack.urlSource}>
+                    <div class="absolute right-4 top-4">
+                        <Tags size="xs" variant={stack?.tagColor}>{stack.tagName}</Tags>
+                    </div>
+                </CardWrapper>
+            ))}
+        </div>
+    </Section>
+</Layout>
