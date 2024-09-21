@@ -6,7 +6,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://coihsan.vercel.app/" ,
+    site: "https://coihsan.github.io",
+    base: '/',
     integrations: [
         tailwind(), 
         icon({

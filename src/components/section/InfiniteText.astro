@@ -1,13 +1,17 @@
 ---
+import { Icon } from "astro-icon/components"
 import Section from "./Section.astro"
 
 const skills = ["Frontend Developer", "Backend Developer", "SEO Specialist", "UI/UX Designer", "Fullstack Developer"]
 ---
 
-<div class="overflow-hidden relative w-full max-w-screen-lg mx-auto py-4 px-4 md:px-9 bg-white text-black font-semibold">
+<div class="overflow-hidden relative w-full max-w-screen-lg mx-auto bg-white text-black">
     <ul class="flex items-center justify-between flex-nowrap gap-5 w-full overflow-hidden">
         {skills.map((skill, index) => (
-            <li class="flex-1 whitespace-nowrap">{skill}</li>
+            <li class="flex-1 font-[clash] flex items-center uppercase whitespace-nowrap text-3xl font-bold">
+                <Icon name={'linehorizontal'} />
+                <span>{skill}</span>
+            </li>
         ))}
     </ul>
 </div>

@@ -2,35 +2,7 @@
 import { Icon } from "astro-icon/components"
 import Link from "../ui/Link.astro"
 import Section from "./Section.astro"
-const today = new Date();
-const thisDate = today.getDate();
-const thisYear = today.getFullYear();
-const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const thisUpdate = 3 || 15;
-  const currentMonth = month[today.getMonth()];
-  const recentMonth = month[today.getMonth() - 1];
-  let thisFormatDate = "";
-  if (thisDate < thisUpdate) {
-    thisFormatDate = recentMonth;
-  } else {
-    thisFormatDate = currentMonth;
-  }
-const thisFormat = thisFormatDate + " " + thisYear;
 ---
-
 <Section>
     <h3 class="h1">Have idea for web?</h3>
     <div class="flex gap-2">
@@ -43,9 +15,5 @@ const thisFormat = thisFormatDate + " " + thisYear;
             <Icon name={'github'} size={22} />
         </Link>
     </div>
-    <code class="text-center mx-auto text-zinc-400 mt-6 text-sm">Last update — <span>{thisUpdate}</span> {thisFormat} </code>
+    <code class="text-center mx-auto text-zinc-400 mt-6 text-sm">Last update — 3 September {new Date().getFullYear()}</code>
 </Section>
-
-<script>
-  import "../../scripts/buttonCopy.js"
-</script>
