@@ -1,8 +1,7 @@
 ---
 import "../styles/styles.css";
 import Nav from "../components/Nav.astro";
-import Footer from "../components/section/Footer.astro";
-import Overlay from "../components/ui/Overlay.astro";
+import Footer from "../components/Footer.astro";
 import BaseHead from "./BaseHead.astro";
 ---
 
@@ -11,9 +10,11 @@ import BaseHead from "./BaseHead.astro";
 	<head>
 		<BaseHead thisSite="Muhammad Ihsan" title={'Home'} description="Muhammad Ihsan's personal website" />
 	</head>
-	<body class="px-4">
-		<Nav />
-		<slot />
-		<Footer />
+	<body id="smooth-wrapper" class="px-4">
+		<main id="smooth-content">
+			<Nav />
+			<slot />
+			<Footer />
+		</main>
 	</body>
 </html>

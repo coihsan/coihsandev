@@ -8,7 +8,7 @@ import Section from "../components/section/Section.astro";
 
 <Layout title="Error">
     <Section>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center h-full">
             <Image
                 loading={"eager"}
                 class="rounded-xl mb-8"
@@ -23,3 +23,8 @@ import Section from "../components/section/Section.astro";
         </div>
     </Section>
 </Layout>
+<script>
+	import "../scripts/buttonCopy.js"
+	import "../scripts/mediaquery.js"
+	import "../scripts/menu.js"
+</script>

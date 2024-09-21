@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components"
-import ButtonCopy from "../react/ButtonCopy"
 import Link from "../ui/Link.astro"
 import Section from "./Section.astro"
 const today = new Date();
@@ -35,7 +34,7 @@ const thisFormat = thisFormatDate + " " + thisYear;
 <Section>
     <h3 class="h1">Have idea for web?</h3>
     <div class="flex gap-2">
-        <ButtonCopy client:only />
+      <button onclick="useButtonCopy()">Email me</button>
         <Link href="/" variant="default" size="lg">
             <Icon name={'whatsapp'} size={22} />
             WhatsApp
@@ -46,3 +45,7 @@ const thisFormat = thisFormatDate + " " + thisYear;
     </div>
     <code class="text-center mx-auto text-zinc-400 mt-6 text-sm">Last update — <span>{thisUpdate}</span> {thisFormat} </code>
 </Section>
+
+<script>
+  import "../../scripts/buttonCopy.js"
+</script>

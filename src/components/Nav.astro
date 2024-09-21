@@ -1,34 +1,13 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-const event = new Date();
-import SelectMenu from "../components/react/select-menu";
-import NavLink from "./ui/NavLink.astro";
+import DekstopNav from "./DekstopNav.astro";
+import MobileNav from "./MobileNav.astro";
 ---
 
-<div
-	class="relative w-full max-w-screen-lg mx-auto py-4 px-4 md:px-9 lg:px-16 lg:py-6 xl:py-6 border-x-[1px] border-b-[1px] border-white/20"
->
-	<div class="max-w-screen-lg w-full px-4 md:px-0">
-		<div class="flex items-center justify-between">
-			<a href="/" class="flex items-center gap-2">
-				<Image
-					class="aspect-square rounded-full border border-zinc-50"
-					src={"/src/assets/gue.png"}
-					width={35}
-					height={35}
-					alt={"logo"}
-				/>
-				<span class="font-[clash] font-semibold text-xl select-none">coihsan</span>
-			</a>
-			<nav class="flex items-center gap-4">
-				<NavLink href={'/'}>Home</NavLink>
-				<NavLink href={'/about'}>About</NavLink>
-				<NavLink href={'/stack'}>Stack</NavLink>
-			</nav>
-			<div class="hidden md:flex items-center gap-2">
-				<span class="text-zinc-400 text-sm">Jakarta, {event.toLocaleString("id-ID", {timeZone: "Asia/Jakarta"}).toString()}</span>
-			</div>
-		</div>
-	</div>
+<div>
+  <div id="desktop-nav" class="hidden md:flex">
+    <DekstopNav />
+  </div>
+  <div id="mobile-nav" class="flex md:hidden">
+    <MobileNav />
+  </div>
 </div>
