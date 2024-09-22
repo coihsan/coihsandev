@@ -1,42 +1,20 @@
 ---
 import { Icon } from "astro-icon/components"
-import Section from "./Section.astro"
-const skills = ["Frontend Developer", "Backend Developer", "SEO Specialist", "UI/UX Designer", "Fullstack Developer"]
+const skills = ["frontend web developer", "Digtal Marketing", "UI/UX Designer", "Graphic Designer"]
 ---
 
-<Section borderB>
-    <div class="services-ticker-block overflow-hidden">
-        <ul class="auto_scroll flex items-center justify-evenly h-12 flex-nowrap gap-5 w-full">
-            {skills.map((skill, index) => (
-                <li class="marquee__part flex-1 font-[clash] flex items-center leading-none uppercase gap-3 whitespace-nowrap text-3xl font-bold">
-                    <Icon name={'linehorizontal'} />
-                    <span>{skill}</span>
-                </li>
-            ))}
-        </ul>
+<div class="w-full flex items-center max-w-screen-lg h-12 mx-auto border-x-[1px] border-white/20">
+    <div class="w-1/4 flex h-full items-center bg-white text-black">
+      Fuck!
     </div>
-</Section>
-<script lang="js">
-    import gsap from 'gsap'
-    let currentScroll = 0;
-let isScrollingDown = true;
-
-let tween = gsap.to(".marquee__part", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
-
-gsap.set(".marquee__inner", {xPercent: -50});
-
-window.addEventListener("scroll", function(){
-  
-  if ( window.pageYOffset > currentScroll ) {
-    isScrollingDown = true;
-  } else {
-    isScrollingDown = false;
-  }
-   
-  gsap.to(tween, {
-    timeScale: isScrollingDown ? 1 : -1
-  });
-  
-  currentScroll = window.pageYOffset
-});
-</script>
+      <div class="overflow-hidden w-3/4">
+          <ul class="autoscroll will-change-scroll flex items-center justify-evenly h-12 flex-row gap-5 w-full">
+              {skills.map((skill) => (
+                  <li class="linkscroll flex items-center flex-1 font-[clash] leading-none uppercase gap-3 whitespace-nowrap">
+                      <Icon name={'linehorizontal'} />
+                      <span class="text-3xl font-semibold">{skill}</span>
+                  </li>
+              ))}
+          </ul>
+      </div>
+</div>
