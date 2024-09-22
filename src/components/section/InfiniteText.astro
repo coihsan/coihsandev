@@ -1,17 +1,42 @@
 ---
 import { Icon } from "astro-icon/components"
 import Section from "./Section.astro"
-
 const skills = ["Frontend Developer", "Backend Developer", "SEO Specialist", "UI/UX Designer", "Fullstack Developer"]
 ---
 
 <Section borderB>
-    <ul class="flex items-center justify-between h-12 flex-nowrap gap-5 w-full overflow-hidden">
-        {skills.map((skill, index) => (
-            <li class="flex-1 font-[clash] flex items-center leading-none uppercase gap-3 whitespace-nowrap text-3xl font-bold">
-                <Icon name={'linehorizontal'} />
-                <span>{skill}</span>
-            </li>
-        ))}
-    </ul>
+    <div class="services-ticker-block overflow-hidden">
+        <ul class="marquee__inner flex items-center justify-between h-12 flex-nowrap gap-5 w-full">
+            {skills.map((skill, index) => (
+                <li class="marquee__part flex-1 font-[clash] flex items-center leading-none uppercase gap-3 whitespace-nowrap text-3xl font-bold">
+                    <Icon name={'linehorizontal'} />
+                    <span>{skill}</span>
+                </li>
+            ))}
+        </ul>
+    </div>
 </Section>
+<script lang="js">
+    import gsap from 'gsap'
+    let currentScroll = 0;
+let isScrollingDown = true;
+
+let tween = gsap.to(".marquee__part", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
+
+gsap.set(".marquee__inner", {xPercent: -50});
+
+window.addEventListener("scroll", function(){
+  
+  if ( window.pageYOffset > currentScroll ) {
+    isScrollingDown = true;
+  } else {
+    isScrollingDown = false;
+  }
+   
+  gsap.to(tween, {
+    timeScale: isScrollingDown ? 1 : -1
+  });
+  
+  currentScroll = window.pageYOffset
+});
+</script>

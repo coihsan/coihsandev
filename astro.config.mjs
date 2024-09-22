@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import nodejs from '@astrojs/node';
 import icon from "astro-icon";
-
 // https://astro.build/config
 export default defineConfig({
     site: "https://coihsan.github.io",
@@ -14,6 +13,6 @@ export default defineConfig({
             iconDir: "src/assets/icons"
         }),
     ],
-    output: 'hybrid',
+    output: 'static',
     // adapter: nodejs({ mode: 'standalone' }),
 });

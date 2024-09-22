@@ -1,5 +1,6 @@
 ---
 import Section from "../components/section/Section.astro";
+import BackButton from "../components/ui/BackButton.astro";
 import Layout from "../layouts/Layout.astro";
 import data from "../lib/stack.json"
 import { Icon } from "astro-icon/components";
@@ -7,8 +8,9 @@ import { Icon } from "astro-icon/components";
 
 <Layout title="About">
     <Section paddingYCustom="py-4 lg:py-12 xl:py-12">
+        <BackButton label="About" />
         <article class="prose" transition:name="swap">
-            <h1>Welcome to my page</h1>
+            <h1>Hello! I'm Muhammad Ihsan</h1>
             <p>I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.</p>
             <h3>What I'm doing now</h3>
             <ul>
