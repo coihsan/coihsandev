@@ -1,24 +1,4 @@
----
-import "../styles/styles.css";
-import Nav from "../components/navigation/Nav.astro";
-import Footer from "../components/Footer.astro";
-import BaseHead from "./BaseHead.astro";
----
-
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead thisSite="Muhammad Ihsan" title={'Home'} description="Muhammad Ihsan's personal website" />
-	</head>
-	<body id="smooth-wrapper" class="px-4">
-		<main id="smooth-content">
-			<Nav />
-			<slot />
-			<Footer />
-		</main>
-		<script>import "../lib/scripts/scrollSmooth";</script>
-		<script lang="js">
-			import gsap from "gsap";
+import gsap from "gsap";
 
 gsap.utils.toArray('.auto_scroll').forEach((line, i) => {
 
@@ -67,6 +47,3 @@ function verticalLoop(elements, speed) {
     });
     return tl;
 }
-		</script>
-	</body>
-</html>
