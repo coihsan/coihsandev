@@ -1,0 +1,51 @@
+---
+import Section from "../components/section/Section.astro";
+import BackButton from "../components/ui/BackButton.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout title="Source">
+    <Section paddingYCustom="py-4 lg:py-12 xl:py-12">
+        <article class="prose" transition:name="swap">
+            <BackButton label="Source" />
+            <h1>Design Style</h1>
+            <div>
+                <b>Typography</b>
+                <h1 class="font-[clash]">Clash Display</h1>
+                <a href="https://www.fontshare.com/fonts/clash-display" target="_blank" rel="noopener noreferrer">Fontshare</a>
+                <h2 class="font-[clash]">Clash Display</h2>
+                <h3 class="font-[clash]">Clash Display</h3>
+                <h4 class="font-[clash]">Clash Display</h4>
+                <h5 class="font-[clash]">Clash Display</h5>
+                <h6 class="font-[clash]">Clash Display</h6>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+                <h1 class="font-[archivo]">Archivo</h1>
+                <h2 class="font-[archivo]">Archivo</h2>
+                <h3 class="font-[archivo]">Archivo</h3>
+                <h4 class="font-[archivo]">Archivo</h4>
+                <h5 class="font-[archivo]">Archivo</h5>
+                <h6 class="font-[archivo]">Archivo</h6>
+            </div>
+            <div>
+                <h1>Color style</h1>
+                <b>Zinc</b>
+                <p>Color variation for a zinc color. It's mostly used for text or background colors.</p>
+                <div class="flex flex-wrap gap-3 w-full">
+                    <div class="h-12 rounded-lg w-12 bg-zinc-50" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-100" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-200" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-300" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-400" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-500" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-600" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-700" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-800" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-900" />
+                    <div class="h-12 rounded-lg w-12 bg-zinc-950" />
+                </div>
+            </div>
+        </article>
+    </Section>
+</Layout>

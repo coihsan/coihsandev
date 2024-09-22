@@ -3,7 +3,7 @@
         {
             "title": "TaskyApp",
             "description": "A free, open source kanban app for the web.",
-            "urlDemo": "https://github.com/",
+           "urlDemo": null,
             "urlSource": "https://github.com/coihsan/taskyapp-demo",
             "tagColor": "sky",
             "tagName": "Saas",
@@ -12,7 +12,7 @@
         {
             "title": "coihsan",
             "description": "The source of this website.",
-            "urlDemo": "https://github.com/",
+            "urlDemo": null,
             "urlSource": "https://github.com/",
             "tagColor": "zinc",
             "tagName": "Template",
@@ -28,8 +28,9 @@
             "techStack":["nextjs", "prisma", "nextAuth", "redux"]
         },
         {
-            "title": "authjs-starter",
-            "description": "Auth.js v5 Starter for credentials, google & github",
+            "title": "authjs-starter v5",
+            "description": "Auth.js v5 Starter with credentials, google & github provider",
+            "urlDemo": null,
             "urlSource": "https://github.com/",
             "tagColor": "zinc",
             "tagName": "Template",

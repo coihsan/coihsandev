@@ -22,7 +22,7 @@ import { Icon } from "astro-icon/components";
             <h3>Popular technologies I'm using</h3>
             <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8 not-prose">
                 {data.stack.map((item) =>(
-                    <a href={`${item.url}`} class="not-prose flex flex-col items-center justify-center gap-2 border border-zinc-800 rounded-2xl p-4 hover:bg-zinc-900 transitionSetting">
+                    <a target="_blank" href={`${item.url}`} class="not-prose flex flex-col items-center justify-center gap-2 border border-zinc-800 rounded-2xl p-4 hover:bg-zinc-900 transitionSetting">
                         <Icon name={item.icon} size={25} />
                         <span class="whitespace-nowrap">{item.name}</span>
                     </a>

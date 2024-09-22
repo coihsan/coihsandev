@@ -5,18 +5,22 @@ import Section from "./Section.astro"
 ---
 <Section paddingYDefault>
     <div class="flex flex-col gap-4">
-        <h3 class="titleSection">Have idea for web?</h3>
+        <h3 class="titleSection">Have idea for web, or just say hello?</h3>
         <div class="flex gap-2">
-            <a href="/" class="flex items-center gap-2 rounded-2xl bg-white font-semibold text-black h-12 px-6">
+            <Link href="/" variant="default" size="lg">
+                <Icon name={'copy'} size={22} />
+                E-Mail
+            </Link>
+            <Link target="_blank" href="https://wa.me/6289519469524" variant="default" size="lg">
                 <Icon name={'whatsapp'} size={22} />
                 WhatsApp
-            </a>
+            </Link>
         </div>
         <div class="flex gap-2 items-center">
-            <Link href="/" variant="outline" size="icon">
+            <Link target="_blank" href="/" variant="outline" size="icon">
                 <Icon name={'instagram'} size={22} />
             </Link>
-            <Link href="/" variant="outline" size="icon">
+            <Link target="_blank" href="/" variant="outline" size="icon">
                 <Icon name={'github'} size={22} />
             </Link>
         </div>

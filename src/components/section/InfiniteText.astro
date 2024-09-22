@@ -1,20 +1,17 @@
 ---
 import { Icon } from "astro-icon/components"
+import Section from "./Section.astro"
 const skills = ["frontend web developer", "Digtal Marketing", "UI/UX Designer", "Graphic Designer"]
 ---
-
-<div class="w-full flex items-center max-w-screen-lg h-12 mx-auto border-x-[1px] border-white/20">
-    <div class="w-1/4 flex h-full items-center bg-white text-black">
-      Fuck!
+<Section>
+    <div class="overflow-hidden">
+        <ul class="autoscroll will-change-scroll flex items-center justify-evenly h-12 flex-row gap-5 w-full">
+            {skills.map((skill) => (
+                <li class="linkscroll flex items-center flex-1 font-[clash] leading-none uppercase gap-3 whitespace-nowrap">
+                    <Icon name={'spark'} />
+                    <span class="text-3xl font-semibold">{skill}</span>
+                </li>
+            ))}
+        </ul>
     </div>
-      <div class="overflow-hidden w-3/4">
-          <ul class="autoscroll will-change-scroll flex items-center justify-evenly h-12 flex-row gap-5 w-full">
-              {skills.map((skill) => (
-                  <li class="linkscroll flex items-center flex-1 font-[clash] leading-none uppercase gap-3 whitespace-nowrap">
-                      <Icon name={'linehorizontal'} />
-                      <span class="text-3xl font-semibold">{skill}</span>
-                  </li>
-              ))}
-          </ul>
-      </div>
-</div>
+</Section>
