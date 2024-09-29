@@ -9,7 +9,7 @@ import data from '../../lib/data/data.json';
     <h1 class="titleSection">Repository</h1>
     <div class="grid md:grid-cols-3 gap-4">
         {data.datague.slice(0, 6).map((item) =>(
-            <CardWrapper title={item.title} description={item.description} urlDemo={item.urlDemo} urlSource={item.urlSource}>
+            <CardWrapper logoUrl={item.logoUrl} title={item.title} description={item.description} urlDemo={item.urlDemo} urlSource={item.urlSource}>
                 <div class="absolute right-4 top-4">
                     <Tags size="xs" variant={item?.tagColor}>{item.tagName}</Tags>
                 </div>

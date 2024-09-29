@@ -2,15 +2,27 @@
     "datague" : [
         {
             "title": "TaskyApp",
+            "logoUrl": "/",
             "description": "A free, open source kanban app for the web.",
-           "urlDemo": null,
+            "urlDemo": null,
             "urlSource": "https://github.com/coihsan/taskyapp-demo",
             "tagColor": "sky",
             "tagName": "Saas",
             "techStack":["nextjs", "prisma", "nextAuth", "redux"]
         },
         {
+            "title": "conotes",
+            "logoUrl": "/",
+            "description": "A free, open source notes app for the everyone.",
+            "urlDemo": null,
+            "urlSource": "https://github.com/",
+            "tagColor": "zinc",
+            "tagName": "Template",
+            "techStack":["nextjs", "prisma", "nextAuth", "redux"]
+        },
+        {
             "title": "coihsan",
+            "logoUrl": null,
             "description": "The source of this website.",
             "urlDemo": null,
             "urlSource": "https://github.com/",
@@ -22,6 +34,7 @@
             "title": "yourgrandpa",
             "description": "A Task Manager for free and public source code",
             "urlDemo": "https://github.com/",
+            "logoUrl": null,
             "urlSource": "https://github.com/",
             "tagColor": "fuchsia",
             "tagName": "Blog",
@@ -29,6 +42,7 @@
         },
         {
             "title": "authjs-starter v5",
+            "logoUrl": null,
             "description": "Auth.js v5 Starter with credentials, google & github provider",
             "urlDemo": null,
             "urlSource": "https://github.com/",
@@ -38,6 +52,7 @@
         },
         {
             "title": "karsa-mahasura-template",
+            "logoUrl": null,
             "description": "Template for personal potfolios",
             "urlDemo": "https://github.com/",
             "urlSource": "https://github.com/",
@@ -47,6 +62,7 @@
         },
         {
             "title": "bhadrika-cipta-template",
+            "logoUrl": null,
             "description": "Template for personal potfolios",
             "urlDemo": "https://github.com/",
             "urlSource": "https://github.com/",
@@ -56,6 +72,7 @@
         },
         {
             "title": "zinc-starters-rgkhtp",
+            "logoUrl": null,
             "description": "Template for landing page",
             "urlDemo": "https://zinc-starter.vercel.app/",
             "urlSource": "https://github.com/",

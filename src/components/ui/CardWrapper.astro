@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import Link from "./Link.astro";
 import Tags from "./Tags.astro";
+import { Image } from "astro:assets";
 
 interface TechStack {
   title: string;
@@ -13,7 +14,7 @@ type label = "Saas" | "Web" | "Landing Page";
 
 interface Props {
   title: string;
-  urlDemo?: string;
+  urlDemo?: string | null;
   urlSource?: string;
   isSource?: boolean;
   description: string;
@@ -21,20 +22,28 @@ interface Props {
   iconName?: string;
   tagColor?: string;
   tagName?: string;
+  logoUrl?: string | null
 }
 
-const { title, description, urlDemo, urlSource } = Astro.props as Props;
+const { title, description, urlDemo, urlSource, logoUrl } = Astro.props as Props;
 ---
 
 <div class="bg-zinc-950 rounded-lg border border-white/20 p-6 w-full relative">
-  <div class="flex flex-col gap-2 pb-4">
-    <a
+  <div class="flex item-center gap-3 pb-4">
+    {logoUrl === null ? (
+      null
+    ) : (
+      <Image src={`${logoUrl}`} width={50} height={50} alt={'logo'} />
+    )}
+    <div class="flex flex-col gap-2 ">
+      <a
       class="text-xl font-semibold hover:underline w-max"
       href={urlDemo}
       target="_blank"
       rel="noopener noreferrer">{title}</a
     >
     <p class="text-sm text-zinc-400 min-h-12">{description}</p>
+    </div>
   </div>
   <div class="w-max flex items-center gap-2">
     <Link target="_blank" variant={"secondary"} size="sm" href={`${urlSource}`}>
